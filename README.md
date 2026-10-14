@@ -1,13 +1,23 @@
 # abelland-lgtm/scoop-bucket
 
-Scoop bucket for [tbard](https://github.com/abelland-lgtm/tbard), an audiobook
-manager and listener for the terminal.
+[Scoop](https://scoop.sh) manifests for [abelland-lgtm](https://github.com/abelland-lgtm)'s projects on Windows.
 
 ```powershell
 scoop bucket add extras
-scoop bucket add tbard https://github.com/abelland-lgtm/scoop-bucket
-scoop install tbard
+scoop bucket add abelland https://github.com/abelland-lgtm/scoop-bucket
 ```
 
-This installs mpv and ffmpeg too. `bucket/tbard.json` is updated automatically
-by tbard's release workflow; do not edit it by hand.
+`extras` is needed for mpv, which tbard depends on.
+
+## Apps
+
+| App | Description | Install |
+|---|---|---|
+| [tbard](https://abelland-lgtm.github.io/tbard/) | Audiobook manager and listener for the terminal (installs mpv and ffmpeg too) | `scoop install abelland/tbard` |
+
+Update with `scoop update *`.
+
+## Maintenance
+
+Each project's release workflow writes its manifest in `bucket/` automatically on every release. Change the
+project's workflow rather than editing the manifests here by hand.
