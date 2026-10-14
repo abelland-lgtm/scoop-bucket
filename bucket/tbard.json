@@ -1,0 +1,25 @@
+{
+  "version": "0.1.0",
+  "description": "Audiobook manager and listener for the terminal: your Audible library, chapter-split downloads, playback with mpv and position sync",
+  "homepage": "https://github.com/abelland-lgtm/tbard",
+  "license": "GPL-3.0-or-later",
+  "depends": [
+    "extras/mpv",
+    "main/ffmpeg"
+  ],
+  "architecture": {
+    "64bit": {
+      "url": "https://github.com/abelland-lgtm/tbard/releases/download/v0.1.0/tbard-x86_64-pc-windows-msvc.zip",
+      "hash": "3403ed5f8b886004b456ba4b89dd1fddc8dbd2327d1b569f8d62a8202e3d0c9b"
+    }
+  },
+  "bin": "tbard.exe",
+  "checkver": "github",
+  "autoupdate": {
+    "architecture": {
+      "64bit": {
+        "url": "https://github.com/abelland-lgtm/tbard/releases/download/v$version/tbard-x86_64-pc-windows-msvc.zip"
+      }
+    }
+  }
+}
